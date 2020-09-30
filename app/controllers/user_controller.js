@@ -13,7 +13,6 @@ exports.findAll = (req, res)=>{
       res.send(err)
     }
     else{
-      // res.render('pages/index', {user: user})
       res.send(user)
     }
   })
