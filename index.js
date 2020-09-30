@@ -9,8 +9,13 @@ app.use(express.static(__dirname + '/public'))
 
 app.use(bodyParser.urlencoded({extended: false}))
 
+const Artikel = require('./app/models/artikel_model')
+
 app.get('/', (req, res)=>{
-  res.send('Hello.. this is for riset EJS')
+  Artikel.findAll((err, artikel)=>{
+    if(err) res.send(err)
+    res.render('pages/index', {artikel: artikel})
+  })
 })
 
 const userRoute = require('./app/routes/user_route')

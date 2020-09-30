@@ -24,7 +24,7 @@ User.findById = (id, result)=>{
 }
 
 User.create = (newUser, result)=>{
-  conn.query(`INSERT INTO ${table} SET ${newUser}`, (err, res)=>{
+  conn.query(`INSERT INTO ${table} SET ?`, newUser, (err, res)=>{
     if(err) result(null, err)
     result(null, res.insertId)
   })
