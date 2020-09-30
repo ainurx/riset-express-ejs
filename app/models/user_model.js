@@ -10,7 +10,7 @@ const User = function(user){
 }
 
 User.findAll = result =>{
-  conn.query(`SELECT * FROM ${user}`, (err, res)=>{
+  conn.query(`SELECT * FROM ${table}`, (err, res)=>{
     if(err) result(null, err)
     result(null, res)
   })
