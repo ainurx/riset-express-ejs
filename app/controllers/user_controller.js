@@ -78,7 +78,7 @@ exports.signin = (req, res)=>{
 }
 
 exports.auth = (req, res)=>{
-
+  // User.
 }
 
 exports.daftar = (req, res)=>{

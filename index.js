@@ -19,8 +19,10 @@ app.get('/', (req, res)=>{
 })
 
 const userRoute = require('./app/routes/user_route')
+const artikelRoute = require('./app/routes/artikel_routes')
 
 app.use('/admin', userRoute)
+app.use('/artikel', artikelRoute)
 
 app.listen(PORT, ()=>{
   console.log("the server is running")
